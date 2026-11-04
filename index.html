@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashring, le réveil qui suit ton emploi du temps</title>
+<meta name="description" content="Flashring lit ton emploi du temps PRONOTE et règle ton réveil sur ton premier cours, jour par jour. Gratuit, avec des pubs dans l'app.">
+<meta property="og:title" content="Flashring, le réveil qui suit ton emploi du temps">
+<meta property="og:description" content="Ton réveil sonne à l'heure de ton premier cours. Gratuit sur iPhone et Android.">
+<style>
+:root{--bg:#fff8f3;--fg:#1d1a2b;--muted:#5d5870;--card:#ffffff;--line:#eadfd6;--accent:#ff5a3c;--accent-fg:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#15121f;--fg:#f4f1fa;--muted:#b3adc7;--card:#1f1b2e;--line:#322c47;--accent:#ff6a4d;--accent-fg:#1a1208}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+main{width:100%;max-width:420px;text-align:center}
+h1{font-size:2rem;margin:0 0 6px;letter-spacing:-.02em}
+.slogan{color:var(--muted);margin:0 0 28px;font-size:1.05rem}
+.btn{display:block;width:100%;padding:16px 18px;margin:0 0 12px;border-radius:14px;text-decoration:none;font-weight:700;font-size:1.05rem;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.btn small{display:block;font-weight:400;color:var(--muted);font-size:.85rem;margin-top:2px}
+.btn.main{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn.main small{color:inherit;opacity:.85}
+.note{color:var(--muted);font-size:.85rem;margin:20px 0 0}
+.note a{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>Flashring</h1>
+<p class="slogan">Ton réveil suit ton emploi du temps.</p>
+
+<a id="ios" class="btn" href="https://apps.apple.com/fr/app/id6813667217">Télécharger sur iPhone<small>App Store</small></a>
+<a id="android" class="btn" href="https://play.google.com/store/apps/details?id=com.hugo.reveilecole.reveil_ecole&amp;referrer=utm_source%3Dinstagram%26utm_medium%3Dbio%26utm_campaign%3Dboost_nov">Télécharger sur Android<small>Google Play</small></a>
+
+<p class="note">Gratuit à télécharger, avec des pubs dans l'app. Fonctionne avec PRONOTE.<br>
+<a href="https://hugolc3.github.io/flashring-legal/privacy-policy.html">Politique de confidentialité</a></p>
+</main>
+<script>
+(function(){
+  var ua = navigator.userAgent || "";
+  var main = /iPhone|iPad|iPod/i.test(ua) ? "ios" : (/Android/i.test(ua) ? "android" : null);
+  if(main){
+    var el = document.getElementById(main);
+    el.className += " main";
+    el.parentNode.insertBefore(el, el.parentNode.querySelector(".btn"));
+  }
+})();
+</script>
+</body>
+</html>
